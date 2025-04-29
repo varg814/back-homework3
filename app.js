@@ -58,6 +58,31 @@
 
 // 4)Create a function that imitates to return fake data, use setTimeout. make both async/await and .then.catch methods.
 
+// function fakeFetch1() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const success = true;
+//             if (success) {
+//                 resolve({ name: "John Doe", age: 20 });
+//             } else {
+//                 reject("Failed to fetch data.");
+//             }
+//         }, 1000);
+//     });
+// }
+
+
+// async function fakeFetch2(){
+//     try{
+//         const resp = await fetch('https://dummyjson.com/users');
+//         const data = await resp.json()
+//         console.log(data);
+//     }
+//     catch{
+//         fakeFetch2()
+//     }
+// }
+
 
 
 // 5) Create a sleep function. make a function that takes a ms as an argument and when you call this function waits untill this function resolved. use setTimeout and promises.
@@ -65,3 +90,17 @@
 // await sleep(2000)
 // console.log('second')
 // second should sleep after 2 seconds
+
+
+// function sleep(ms) {
+//     return new Promise(resolve => setTimeout(resolve, ms));
+// }
+
+// async function showSleep() {
+//     console.log('first');
+//     await sleep(2000);
+//     console.log('second');
+// }
+
+// showSleep();
+
